@@ -3,7 +3,7 @@ import Board from "./components/Board";
 import {useEffect, useState} from "react";
 
 function App() {
-    const [board, setBoard] = useState(Array(12).fill(null).map((el) => (
+    const [board, setBoard] = useState(Array(24).fill(null).map((el) => (
         {
             id: Math.random().toString(),
             img: null,
@@ -14,7 +14,7 @@ function App() {
     const [resultMove, setResultMove] = useState([])
 
     console.log(board)
-    const emodjy = ['🐬', '🦕', '🏄', '⛵️', '🌺', '🌴']
+    const emodjy = ['🐬', '🦕', '🏄', '⛵️', '🌺', '🌴', "🎆", '⚙️', '❤️‍🔥','🇦🇽', '🚞', '🐤' ]
 
     const emodjyBoard = () => {
         const newBoard = board.map(el =>
@@ -24,7 +24,7 @@ function App() {
             for (let j = 1; j <= 2; j++) {
                 let index;
                 do {
-                    index = Math.trunc(Math.random() * 12)
+                    index = Math.trunc(Math.random() * 24)
                 }
                 while (newBoard[index].img !== null)
                 newBoard[index].img = emodjy[i]

@@ -2,11 +2,11 @@ import Square from "./Square";
 
 const boardStyle = {
     border: "4px solid green",
-    width: "400px",
-    height: "300px",
+    width: "1200px",
+    height: "800px",
     margin: "0 auto",
     display: "grid",
-    gridTemplateColumns: 'auto auto auto auto'
+    gridTemplateColumns: 'auto auto auto auto auto auto'
 }
 const Board = (props) => {
     return (
